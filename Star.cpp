@@ -1,14 +1,20 @@
-#include<stdio.h>
-#include<conio.h>
+#include <stdio.h>
 
 int main()
 {
-	char c;
-	printf("Enter a character:");
-	scanf("%c",&c);
+	int i, j, rows, count = 0;
 	
-	// %d dispays the integer value of a character
-	// %c displays the actual character
-	printf("ASCII value of %c=%d",c,c);
-	return 0;
+	printf("Enter the number of rows");
+	scanf("%d", &rows);
+	
+	for (i=0; i<2 * rows; i=i+2)
+	{
+		for (j = 0; j <= i; j++)
+		{
+			printf("%c", '*' + count);
+		}
+		count = 0;
+		printf("\n");
+	}
+	return (0);
 }
